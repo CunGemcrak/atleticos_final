@@ -4,10 +4,12 @@ const { Router } = require('express');
 
 const {CrearUsuario} = require('../controllers/Usuario/Post/Crear_Usuario')
 const {BusquedaUsuario} = require('../controllers/Usuario/Get/Buscar_Usuario')
+const {ModificarUsuario} = require('../controllers/Usuario/Put/Modificar_Usuario')
 
 const router = Router();
 router.post('/usuario/create', CrearUsuario)
 router.get('/usuario/login/:user/:pass', BusquedaUsuario)
+router.put('/usuario/update/:id',ModificarUsuario)
 /*
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
